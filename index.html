@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maçonnerie — Gestion</title>
+<meta name="description" content="MISSION — Un bureau nomade pour ceux qui ont la main et l'esprit en communion.">
+<meta property="og:title" content="MISSION — Intelligence Augmentée pour Artisans">
+<meta property="og:description" content="7 actes. L'IA porte le reste.">
+<title>MISSION — Intelligence Augmentée pour Artisans</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -157,7 +160,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#eeecea;color:#1a
 
   <div class="app-box">
     <div class="nav">
-      <span class="nav-brand">Maçonnerie</span>
+      <span class="nav-brand" style="color:#185fa5;font-weight:700;letter-spacing:1px">MISSION</span>
       <button class="tab on" id="tab-dashboard">
         <i class="ti ti-layout-dashboard"></i> Tableau de bord
       </button>
@@ -216,7 +219,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#eeecea;color:#1a
     <div class="screen" id="screen-devis">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #f0f0f0">
         <div>
-          <div style="font-size:22px;font-weight:500">Nouveau devis</div>
+          <div style="font-size:22px;font-weight:500">Nouvelle Mission</div>
           <div style="font-size:13px;color:#888;margin-top:2px">Main d'œuvre</div>
         </div>
         <span style="font-size:12px;color:#aaa" id="devis-num-display">DEV-2025-001</span>
@@ -603,7 +606,7 @@ function imprimerFacture(num) {
   var cond = prefs.conditions || {};
   var mentions = prefs.mentions || {};
 
-  var nomEnt = ent.nom || 'Maçonnerie Dupont';
+  var nomEnt = ent.nom || 'MISSION — Dupont';
   var adrEnt = ent.adresse || '12 rue des Artisans, 78000 Versailles';
   var telEnt = ent.tel || '06 12 34 56 78';
   var siretEnt = ent.siret || '123 456 789 00012';
@@ -896,7 +899,7 @@ document.getElementById('btn-apercu').addEventListener('click', function() {
     });
   });
   var totalFmt = total > 0 ? total.toLocaleString('fr-FR',{minimumFractionDigits:2})+' €' : data.total;
-  var nomEnt = (ent.nom)||'Maçonnerie Dupont';
+  var nomEnt = (ent.nom)||'MISSION — Dupont';
   var adrEnt = (ent.adresse)||'12 rue des Artisans, 78000 Versailles';
   var telEnt = (ent.tel)||'06 12 34 56 78';
   var siretEnt = (ent.siret)||'123 456 789 00012';
@@ -961,7 +964,7 @@ document.getElementById('btn-gen-ia').addEventListener('click', function() {
   zone.innerHTML = '';
 
   var prompt = 'Tu es expert en devis professionnels pour artisans du bâtiment.\n\n'
-    + 'ENTREPRISE : ' + (ent.nom||'Maçonnerie Dupont') + '\n'
+    + 'ENTREPRISE : ' + (ent.nom||'MISSION — Dupont') + '\n'
     + (ent.adresse||'') + '\nTél : ' + (ent.tel||'') + ' | SIRET : ' + (ent.siret||'') + '\n\n'
     + 'CLIENT : ' + (data.client||'—') + ' — ' + (data.tel||'') + '\n'
     + 'CHANTIER : ' + (data.adresse||'') + '\nDescription : ' + (data.description||'') + '\n\n'
@@ -1159,7 +1162,7 @@ document.getElementById('devis-num-display').textContent = 'DEV-2025-' + String(
 renderDevis();
 addOp();
 
-console.log('App Maçonnerie démarrée. Devis:', devisList.length, '| Factures:', factList.length);
+console.log('App MISSION démarrée. Devis:', devisList.length, '| Factures:', factList.length);
 </script>
 </body>
 </html>
